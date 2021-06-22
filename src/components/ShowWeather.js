@@ -27,16 +27,12 @@ let columns = [
     
     return (
       <table>
-          <thead>
               <tr>{columns.map(col => <th>{col.heading}</th>)}</tr>
-          </thead>
-          <tbody>
               {data.map(val =>
                   <tr>
                       {columns.map(col => <td>{val[col.property]}</td>)}
                   </tr>
               )}
-          </tbody>
       </table>
   )
 }
